@@ -1,0 +1,197 @@
+/* Variables de Identidad - Colores del Gobierno de México */
+:root {
+    --gob-guinda: #9F2241;
+    --gob-guinda-dark: #7a1a32;
+    --gob-dorado: #D4C19C;
+    --gob-dorado-light: #F0E6D2;
+    --gob-verde: #235B4E;
+    --gob-gris: #696969;
+    --gob-gris-light: #F4F6F8;
+    --text-main: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--gob-gris-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Header Institucional */
+.gob-header {
+    background-color: var(--gob-guinda);
+    color: white;
+    padding: 2rem 1rem;
+    border-bottom: 6px solid var(--gob-dorado);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Layout Principal */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Tarjetas (Cards) */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #e0e0e0;
+}
+
+.card-header {
+    border-bottom: 2px solid var(--gob-dorado);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header h2 {
+    color: var(--gob-guinda);
+    font-size: 1.4rem;
+}
+
+/* Zona de carga */
+.upload-section {
+    text-align: center;
+    border: 2px dashed var(--gob-gris);
+    transition: all 0.3s ease;
+}
+
+.upload-section.drag-active {
+    border-color: var(--gob-guinda);
+    background-color: var(--gob-dorado-light);
+}
+
+.upload-section p {
+    color: var(--gob-gris);
+    margin: 1rem 0 2rem;
+}
+
+/* Botones */
+.btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--gob-guinda);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--gob-guinda-dark);
+}
+
+.btn-secondary {
+    background-color: var(--gob-verde);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #1a4239;
+}
+
+.action-bar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Tablas */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--gob-gris);
+    color: white;
+    font-weight: 600;
+}
+
+td {
+    border-bottom: 1px solid #eeeeee;
+    color: var(--text-main);
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+tr:hover {
+    background-color: var(--gob-dorado-light);
+}
+
+/* Interactividad Tabla */
+.interactive-table th {
+    position: sticky;
+    top: 0;
+    background-color: var(--gob-verde);
+}
+
+/* Utilidades */
+.hidden {
+    display: none !important;
+}
+
+.spinner {
+    border: 4px solid rgba(0,0,0,0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-left-color: var(--gob-guinda);
+    animation: spin 1s linear infinite;
+    margin: 2rem auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
